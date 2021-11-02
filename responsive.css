@@ -44,27 +44,31 @@
   nav div:first-child {
     padding-left: 1rem;
   }
-  .weather-main{
+  .weather-main {
     width: 90%;
-}
+  }
 }
 @media (max-width: 700px) {
-    footer span:not(:first-of-type){
-        display: none;
-    }
-    #datehead{
-        font-size: 1rem;
-    }
-    .weather-main{
-        width: 98%;
-    }
+  footer span:not(:first-of-type) {
+    display: none;
+  }
+  #datehead {
+    font-size: 1rem;
+  }
+  .weather-main {
+    width: 98%;
+  }
+  .windiv{
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 450px) {
-    .icon{
-        width: 1.8rem;
-        height: 1.8rem;
-    }
+  .icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
   #nav-head {
     display: none;
   }
@@ -72,27 +76,94 @@
     grid-template-columns: 1fr 4fr;
   }
   #weather-img {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     top: 10%;
   }
-  .info:nth-child(6){
-      margin-top: 0.5rem;
+  .info:nth-child(6) {
+    margin-top: 0.5rem;
   }
-  .windiv{
-      width: 20rem;
-      left: 0;
-      position: static;
+  .windiv {
+    width: 20rem;
+    left: 0;
+    position: static;
   }
- 
+
   .windiv .info {
-      margin: 0.2rem 0;
+    margin: 0.2rem 0;
   }
-  .windiv .info .icon{
+  .windiv .info .icon {
     width: 1.8rem;
     height: 1.8rem;
   }
-  .sundiv .info{
-  font-size: 0.8rem;
+  .sundiv .info {
+    font-size: 0.8rem;
+  }
+  .brand {
+    justify-content: center;
+  }
+  #weather-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0;
+  }
+  #main-head {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  #main-searchbar {
+    width: 60%;
+    margin-right: 0;
+  }
+  #search-button {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+  #go-button-icon {
+    transform: scale(0.8);
+  }
+  nav div:last-child {
+    padding-right: 2rem;
+  }
+  #refreshsvg{
+    top: .5rem;
+    left: 0;
+  }
+  #location-head{
+    font-size: 2rem;
+  }
+  #datehead{
+    font-size: 0.7rem;
+  }
+  main{
+    height: 75vh;
+  }
+  .weather-main{
+    height: 80%;
+    top: 50%;
+  }
+}
+@media (max-width: 375px) {
+  #weather-icon {
+    width: 120px;
+    height: 120px;
+  }
+  #main-head {
+    font-size: 2.5rem;
+  }
+
+  #main-searchbar {
+    width: 60%;
+    margin-right: 0;
+  }
+  #search-button {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+  #go-button-icon {
+    transform: scale(0.8);
   }
 }
