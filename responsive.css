@@ -138,11 +138,18 @@
     font-size: 0.7rem;
   }
   main{
+    top: 48%;
     height: 75vh;
   }
   .weather-main{
     height: 80%;
     top: 50%;
+  }
+  footer{
+    position: relative;
+    top: 96vh;
+    height: 4vh;
+   
   }
 }
 @media (max-width: 375px) {
