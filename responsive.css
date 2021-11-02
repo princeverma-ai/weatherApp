@@ -1,0 +1,98 @@
+@media (max-width: 1225px) {
+  #crrconditions {
+    font-size: 4.5rem;
+  }
+  .info {
+    font-size: 1.3rem;
+  }
+  #weather-img {
+    width: 18rem;
+    height: 18rem;
+  }
+  .windiv {
+    right: -5rem;
+  }
+  #nav-head {
+    margin: 0;
+  }
+}
+@media (max-width: 960px) {
+  #crrconditions {
+    font-size: 3rem;
+  }
+  .info {
+    font-size: 1.2rem;
+  }
+  #weather-img {
+    width: 18rem;
+    height: 18rem;
+  }
+  .windiv {
+    right: -5rem;
+  }
+  #location-head {
+    font-size: 2.5rem;
+  }
+  #nav-form {
+    width: 90%;
+    height: 100%;
+  }
+  #nav-searchbar {
+    width: 90%;
+    height: 60%;
+  }
+  nav div:first-child {
+    padding-left: 1rem;
+  }
+  .weather-main{
+    width: 90%;
+}
+}
+@media (max-width: 700px) {
+    footer span:not(:first-of-type){
+        display: none;
+    }
+    #datehead{
+        font-size: 1rem;
+    }
+    .weather-main{
+        width: 98%;
+    }
+}
+
+@media (max-width: 450px) {
+    .icon{
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+  #nav-head {
+    display: none;
+  }
+  nav {
+    grid-template-columns: 1fr 4fr;
+  }
+  #weather-img {
+    width: 10rem;
+    height: 10rem;
+    top: 10%;
+  }
+  .info:nth-child(6){
+      margin-top: 0.5rem;
+  }
+  .windiv{
+      width: 20rem;
+      left: 0;
+      position: static;
+  }
+ 
+  .windiv .info {
+      margin: 0.2rem 0;
+  }
+  .windiv .info .icon{
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .sundiv .info{
+  font-size: 0.8rem;
+  }
+}

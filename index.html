@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="loader.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="shortcut icon" type="image/png" href="assets/cloudy.png"/>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="background">
+        <div class="search-main">
+            <div class="brand">
+                <img src="assets/weather-icon.png" id="weather-icon" alt="weather-icon">
+                <h1 id="main-head">Weather</h1>
+            </div>
+            <form id="form">
+                <input type="text" id="main-searchbar" placeholder="Type city here" name="query">
+                <button id="search-button"><svg xmlns="http://www.w3.org/2000/svg" id="go-button-icon" width="48"
+                        height="48" fill="black" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                    </svg></button>
+            </form>
+        </div>
+        <!--Search main-->
+
+        <nav>
+            <!--navigation menu-->
+            <div>
+                <img src="assets/weather-icon.png" id="nav-logo" alt="logo">
+                <h2 id="nav-head">Weather</h2>
+            </div>
+            <div>
+                <form action="submit" id="nav-form">
+                    <input type="text" name="squery" id="nav-searchbar" placeholder="Enter City Name">
+                    <button id="nav-search-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            fill="black" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                        </svg></button>
+                </form>
+            </div>
+        </nav> <!--nav bar-->
+        <main>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="refreshsvg" fill="black"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
+                <path
+                    d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+            </svg>
+            <h1 id="location-head"> Samana, IN</h1>
+            <h2 id="datehead">30/10/21</h2>
+            <div class="weather-main">
+                <span id="crrconditions">23°C <span> Clear</span></span>
+                <span id="inf1" class="info"><img src="assets/thermometer.png" class="icon" alt="img">Min Temp: 16°C</span>
+                <span id="inf2" class="info"><img src="assets/thermometer.png" class="icon" alt="img">Max Temp: 28°C</span>
+                <span id="feelslike" class="info"><img src="assets/feelslike.png" class="icon" alt="img">Feels like: 25°C</span>
+                <span id="clouds" class="info"><img src="assets/clouds.png" class="icon" alt="img">Clouds: 5%</span>
+                <span id="inf3" class="info"><img src="assets/humidity.png" class="icon" alt="img">Humidity: 45%</span>
+                <span id="inf4" class="info"><img src="assets/gauge.png" class="icon" alt="img">Pressure: 32hPa</span>
+                <div class="sundiv">
+                    <span id="inf5" class="info"><img src="assets/sunrise.png" class="icon" alt="img">Sunrise: 7:24 AM</span>
+                    <span id="inf6" class="info"><img src="assets/sunset.png" class="icon" alt="img">Sunset: 6:15 PM</span>
+                </div>
+                <div class="windiv">
+                <span id="inf7" class="info"><img src="assets/wind.png" class="icon" alt="img">Wind: 23 km/h</span>
+                <span id="inf8" class="info"><img src="assets/windy.png" class="icon" alt="img">Gust: 47</span>
+                <span id="inf9" class="info"><img src="assets/directions.png" class="icon" alt="img">Wind Direction: 124°
+                    NE</span>
+            </div>
+                <img src="assets/weather-icon.png" id="weather-img" alt="Weather Status">
+            </div>
+        </main>
+        <!-- loader -->
+        <div class="socket">
+			<div class="gel center-gel">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c1 r1">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c2 r1">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c3 r1">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c4 r1">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c5 r1">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c6 r1">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			
+			<div class="gel c7 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			
+			<div class="gel c8 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c9 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c10 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c11 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c12 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c13 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c14 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c15 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c16 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c17 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c18 r2">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c19 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c20 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c21 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c22 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c23 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c24 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c25 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c26 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c28 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c29 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c30 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c31 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c32 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c33 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c34 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c35 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c36 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			<div class="gel c37 r3">
+				<div class="hex-brick h1"></div>
+				<div class="hex-brick h2"></div>
+				<div class="hex-brick h3"></div>
+			</div>
+			
+		</div>
+        <!--footer start here-->
+        <footer>
+            <span>Made with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ff5d8f"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                </svg> by Prince Verma</span>
+            <span> &copy; Copyright, 2021</span>
+
+            <span><a target="_blank" href="https://openweathermap.org/api">&middot; API</a></span>
+            <span><a target="_blank" href="https://github.com/princeverma-ai">&middot; About</a></span>
+        </footer>
+    </div>
+    <!--background-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
